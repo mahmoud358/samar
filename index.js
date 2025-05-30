@@ -13,7 +13,7 @@ require("dotenv").config();
 app.use(express.json());
 
 
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 8000
 server.listen(PORT, () => {
     connect();
     console.log(`Server running on port ${PORT}`);
