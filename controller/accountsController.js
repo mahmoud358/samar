@@ -3,7 +3,7 @@ const axios = require("axios")
 const GameAccounts = require("../modules/accounts");
 const { validateGameData, validateLoginInfo } = require("../utils/accountValidator");
 const APIERROR = require("../utils/apiError");
-// const {connectDB} =require('../utils/lib') ;
+
 
 // const GAME_API_KEY = JSON.parse(process.env.GAME_API_KEY);
 
@@ -219,9 +219,7 @@ const addAccount = async (req, res) => {
 
 let getAllAccounts = async (req, res, next) => {
     try {
-        // await connectDB();
-        console.log("nnnn");
-        
+    
         let accounts = await GameAccounts.find()
         console.log(accounts);
         
