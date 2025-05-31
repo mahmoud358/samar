@@ -221,6 +221,8 @@ let getAllAccounts = async (req, res, next) => {
         console.log("nnnn");
         
         let accounts = await GameAccounts.find()
+        console.log(accounts);
+        
         res.status(200).json({ status: 'success', data: accounts })
 
     } catch (err) {
