@@ -58,3 +58,7 @@ app.use(cors());
 const accountRoute = require("./routes/accountsRoute")
 
 app.use("/account", accountRoute)
+
+app.all("*", (req, res, next) => {
+    res.status(404).json({ "status": "Failed", "message": "Page not found" });
+  });
