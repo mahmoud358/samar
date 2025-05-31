@@ -21,6 +21,8 @@ server.listen(PORT, () => {
 
 const connect = async () => {
     try {
+        console.log('MONGO URI:', process.env.MONGO);
+
         await mongoose.connect(process.env.MONGO);
         console.log("Connected to MongoDB");
     } catch (error) {
